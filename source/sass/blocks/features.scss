@@ -1,0 +1,72 @@
+.features {
+  padding: 50px 20px 60px;
+}
+
+.features__intro {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: #7859cf;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 36px;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  text-align: center;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+
+.features__item {
+  margin-bottom: 32px;
+  padding: 66px 0 0;
+
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  &--speed {
+    background-image: url("../../img/features-speed.svg");
+  }
+
+  &--comfort {
+    background-image: url("../../img/features-comfort.svg");
+  }
+
+  &--energy {
+    background-image: url("../../img/features-energy.svg");
+  }
+
+  &--eco {
+    background-image: url("../../img/features-eco.svg");
+  }
+}
+
+.features__heading {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+}
+
+.features__description {
+  margin: 0;
+
+  text-align: center;
+}

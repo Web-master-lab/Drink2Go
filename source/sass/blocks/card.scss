@@ -1,0 +1,59 @@
+.card {
+  padding: 40px 20px 20px;
+
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+
+  color: #333333;
+  text-decoration: none;
+}
+
+.card__img {
+  margin-bottom: 24px;
+  align-self: center;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.card__description {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.card__buy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.card__button {
+  padding: 8px 20px 8px 46px;
+
+  color: #ffffff;
+  font-family: $main-fonts;
+  font-size: 14px;
+  line-height: 20px;
+
+  background-color: #7859cf;
+  background-image: url("../../img/basket-card.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 8px;
+  border: none;
+  border-radius: 4px;
+}
