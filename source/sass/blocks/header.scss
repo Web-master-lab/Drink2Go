@@ -9,4 +9,14 @@
   color: #333333;
 
   background-color: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+    padding: 0 20px;
+  }
+}
+
+.header__logo {
+  display: block;
+  padding: 22px 0;
 }

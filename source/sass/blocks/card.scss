@@ -13,9 +13,13 @@
   text-decoration: none;
 }
 
+.card__link picture {
+  display: flex;
+  justify-content: center;
+}
+
 .card__img {
   margin-bottom: 24px;
-  align-self: center;
 }
 
 .card__title {
@@ -24,11 +28,22 @@
 
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .card__description {
   margin-top: 0;
   margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .card__buy {

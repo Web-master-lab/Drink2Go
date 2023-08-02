@@ -1,5 +1,9 @@
 .features {
   padding: 50px 20px 60px;
+
+  @media (min-width: $tablet-width) {
+    padding: 60px 20px 100px;
+  }
 }
 
 .features__intro {
@@ -18,10 +22,18 @@
   margin-top: 0;
   margin-bottom: 36px;
 
+  color: #333333;
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 60px;
+
+    font-size: 42px;
+    line-height: 64px;
+  }
 }
 
 .features__list {
@@ -29,6 +41,12 @@
   padding: 0;
 
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 30px;
+  }
 }
 
 .features__item {
@@ -53,20 +71,46 @@
   &--eco {
     background-image: url("../../img/features-eco.svg");
   }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: 72px;
+
+    background-position: 0 0;
+  }
 }
 
 .features__heading {
   margin-top: 0;
   margin-bottom: 4px;
 
+  color: #333333;
   font-size: 18px;
-  font-weight: 700;
   line-height: 32px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
+
+    font-size: 24px;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 
 .features__description {
   margin: 0;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+  }
 }

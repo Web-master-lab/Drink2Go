@@ -1,3 +1,11 @@
+.filter {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px 40px;
+  }
+}
+
 .filter__group {
   margin: 0;
   margin-bottom: 30px;
@@ -43,6 +51,11 @@
   background-color: #7859cf;
   border: none;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 
 .filter__reset {
@@ -58,4 +71,21 @@
   background-color: #ffffff;
   border: none;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    left: 20px;
+
+    width: auto;
+    margin-bottom: 0;
+  }
+}
+
+.filter__buttons {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 40px;
+    grid-column: 1/-1;
+    justify-content: center;
+  }
 }

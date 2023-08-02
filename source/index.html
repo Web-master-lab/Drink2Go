@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="page__body">
     <header class="header">
       <a class="header__logo" href="index.html">
-        <img src="img/logo-mobile.svg" alt="Наш логотип.">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img src="img/logo-mobile.svg" alt="Наш логотип.">
+        </picture>
       </a>
 
       <nav class="main-nav main-nav--closed">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item main-nav__item--active">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link">Главная</a>
           </li>
           <li class="site-list__item">
@@ -61,7 +65,12 @@
           <div class="promo__slider swiper-wrapper">
 
             <div class="promo__slide promo__slide--white swiper-slide">
-              <img src="img/slider-white-mobile.png" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в белых и бежевых тонах. На ней написано - Decaf Flat White." width="280" height="280">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-white-tablet.webp 1x, img/slider-white-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider-white-mobile.webp 1x, img/slider-white-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-white-tablet.png 1x, img/slider-white-tablet@2x.png 2x">
+                <img class="promo__img" src="img/slider-white-mobile.png" srcset="img/slider-white-mobile@2x.png 2x" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в белых и бежевых тонах. На ней написано - Decaf Flat White." width="280" height="280">
+              </picture>
               <p class="promo__new">Новинка!</p>
               <h3 class="promo__title">Декаф Флэт Уайт</h3>
               <p class="promo__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -80,7 +89,12 @@
             </div>
 
             <div class="promo__slide promo__slide--lavander swiper-slide">
-              <img src="img/slider-lavander-mobile.png" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в лавандовых тонах. На ней написано - Lavender Latte." width="280" height="280">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-lavander-tablet.webp 1x, img/slider-lavander-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider-lavander-mobile.webp 1x, img/slider-lavander-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-lavander-tablet.png 1x, img/slider-lavander-tablet@2x.png 2x">
+                <img class="promo__img" src="img/slider-lavander-mobile.png" srcset="img/slider-lavander-mobile@2x.png 2x" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в белых и бежевых тонах. На ней написано - Decaf Flat White." width="280" height="280">
+              </picture>
               <p class="promo__new">Новинка!</p>
               <h3 class="promo__title">Лавандовый Латте</h3>
               <p class="promo__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
@@ -99,7 +113,12 @@
             </div>
 
             <div class="promo__slide promo__slide--espresso swiper-slide">
-              <img src="img/slider-espresso-mobile.png" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в черных тонах. На ней написано - Triple Espresso." width="280" height="280">
+              <picture>
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/slider-espresso-tablet.webp 1x, img/slider-espresso-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/slider-espresso-mobile.webp 1x, img/slider-espresso-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/slider-espresso-tablet.png 1x, img/slider-espresso-tablet@2x.png 2x">
+                <img class="promo__img" src="img/slider-espresso-mobile.png" srcset="img/slider-espresso-mobile@2x.png 2x" alt="Жестяная баночка кофе объемом 0.3 литра, выполненная в белых и бежевых тонах. На ней написано - Decaf Flat White." width="280" height="280">
+              </picture>
               <p class="promo__new">Новинка!</p>
               <h3 class="promo__title">Тройной Эспрессо</h3>
               <p class="promo__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
@@ -169,9 +188,13 @@
                   <span class="visually-hidden">от</span>
                   <input class="range__input" type="number" name="price-from" placeholder="0" min="0" step="1">
                 </label>
-                <label class="range__field">
+                <label class="range__field range__field--mobile">
                   <span class="visually-hidden">до</span>
                   <input class="range__input" type="number" name="price-to" value="123" placeholder="200" min="0" step="1">
+                </label>
+                <label class="range__field range__field--desktop">
+                  <span class="visually-hidden">до</span>
+                  <input class="range__input" type="number" name="price-to" value="900" placeholder="200" min="0" step="1">
                 </label>
               </div>
             </div>
@@ -252,25 +275,32 @@
             </ul>
           </fieldset>
 
-          <button class="filter__submit" type="submit">Применить</button>
-          <button class="filter__reset" type="reset">Сбросить</button>
+          <div class="filter__buttons">
+            <button class="filter__submit" type="submit">Применить</button>
+            <button class="filter__reset" type="reset">Сбросить</button>
+          </div>
         </form>
 
         <div class="catalog__wrapper">
-          <label class="catalog__sort-label" for="sort">Сортировка:</label>
-          <select class="catalog__sort" name="sort" id="sort" form="filters">
-            <option value="default">по умолчанию</option>
-            <option value="expensive-first">сначала дорогие</option>
-            <option value="cheap-first">сначала дешёвые</option>
-            <option value="high-rating">высокий рейтинг</option>
-          </select>
+          <div class="catalog__sort-wrapper">
+            <label class="catalog__sort-label" for="sort">Сортировка:</label>
+            <select class="catalog__sort" name="sort" id="sort" form="filters">
+              <option value="default">по умолчанию</option>
+              <option value="expensive-first">сначала дорогие</option>
+              <option value="cheap-first">сначала дешёвые</option>
+              <option value="high-rating">высокий рейтинг</option>
+            </select>
+          </div>
 
           <div class="catalog__cards">
             <h3 class="visually-hidden">Список товаров.</h3>
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-1.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-1.webp 1x, img/coffee-can-1@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-1.png" srcset="img/coffee-can-1@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -282,7 +312,10 @@
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-2.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-2.webp 1x, img/coffee-can-2@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-2.png" srcset="img/coffee-can-2@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -294,7 +327,10 @@
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-3.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-3.webp 1x, img/coffee-can-3@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-3.png" srcset="img/coffee-can-3@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -306,7 +342,10 @@
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-4.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-4.webp 1x, img/coffee-can-4@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-4.png" srcset="img/coffee-can-4@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -318,7 +357,10 @@
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-5.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-5.webp 1x, img/coffee-can-5@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-5.png" srcset="img/coffee-can-5@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -330,7 +372,10 @@
 
             <article class="card">
               <a class="card__link" href="#">
-                <img class="card__img" src="img/coffee-can-6.png" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                <picture>
+                  <source type="image/webp" srcset="img/coffee-can-6.webp 1x, img/coffee-can-6@2x.webp 2x">
+                  <img class="card__img" src="img/coffee-can-6.png" srcset="img/coffee-can-6@2x.png 2x" alt="Жестяная банка кофейного напитка объемом 0.3 литра, спереди на ней написано название напитка." width="130" height="188">
+                </picture>
                 <h4 class="card__title">Декаф Флэт Уайт</h4>
               </a>
               <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
@@ -363,10 +408,100 @@
             </li>
           </ul>
         </div>
-
       </section>
+
+      <div class="map" id="map"></div>
     </main>
 
+    <footer class="footer">
+      <section class="social">
+        <a class="social__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">
+            <img src="img/logo-tablet.svg" alt="Наш логотип">
+          </picture>
+        </a>
+
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="#">
+              <span class="visually-hidden">Мы во Вконтакте!</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--pinterest" href="#">
+              <span class="visually-hidden">Мы в Пинтерест!</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--ok" href="#">
+              <span class="visually-hidden">Мы в Одноклассниках!</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="additional-nav">
+        <div class="additional-nav__wrapper">
+          <h3 class="additional-nav__title">Интернет-магазин</h3>
+
+          <nav class="additional-nav__group">
+            <ul class="additional-nav__list">
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Каталог</a>
+              </li>
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Способы оплаты</a>
+              </li>
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">О нас</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="additional-nav__wrapper">
+          <h3 class="additional-nav__title">Медиа</h3>
+
+          <nav class="additional-nav__group">
+            <ul class="additional-nav__list">
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Блог</a>
+              </li>
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Информация для СМИ</a>
+              </li>
+              <li class="additional-nav__item">
+                <a class="additional-nav__link" href="#">Правовая информация</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="additional-nav__wrapper">
+          <h3 class="additional-nav__title">Контакты</h3>
+
+          <p class="additional-nav__address">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+          <a class="additional-nav__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+        </div>
+
+        <div class="copyright">
+          <p class="copyright__wrapper">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <span>Разработано в</span><span>HTML Academy</span>
+              <svg width="12" height="16" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.2151 5.75392L5.97184 2.49957V2.49875L5.97121 2.49916L5.97058 2.49875V2.49957L0.784854 5.75013V1.40658L6.00008 0.830884L11.2151 1.40658V5.75392ZM11.211 6.32987L9.12557 7.62344L5.98451 5.65607L5.97935 6.22863L8.66414 7.9096L8.20107 8.19683L5.98451 6.80853L5.97935 7.3811L7.72892 8.47648L7.31607 8.76717L7.30606 8.77351L5.98451 7.95383L5.97935 8.52631L6.8465 9.06404L5.96315 9.62244L0.796198 6.3886L5.97058 3.1139V3.11448L11.211 6.32987ZM11.2151 11.7713L6 15.0384L0.784854 11.7713V7.02542L5.97763 10.2796L5.98631 10.8693L2.42396 8.63702L2.41871 9.20959L5.99523 11.4728L6.00407 12.0782L2.42873 9.83883L2.42356 10.4113L6 12.6745L9.60624 10.4026V7.95712L11.2151 6.94552V11.7713ZM5.99984 -3.17891e-07L0 0.662267V12.2411L6 16L12 12.2411V0.662267L5.99984 -3.17891e-07Z" fill="#BDBDBD"/>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </section>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>

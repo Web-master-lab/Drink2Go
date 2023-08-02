@@ -36,6 +36,10 @@
     border: 2px solid #9070ec;
     border-radius: 50%;
   }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+  }
 }
 
 .range__slider-bar {
@@ -76,6 +80,22 @@
   }
 }
 
+.range__field {
+  &--desktop {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--mobile {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
+
 .range__input {
   width: 118px;
   padding: 8px 10px;
@@ -89,4 +109,8 @@
 
   border: 2px solid #9070ec;
   border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+  }
 }

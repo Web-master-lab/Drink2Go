@@ -1,0 +1,37 @@
+.copyright {
+  padding: 20px 20px 30px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 7px;
+    grid-column: 2/3;
+  }
+}
+
+.copyright__wrapper {
+  margin: 0;
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #bdbdbd;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+}
+
+.copyright__link span:first-of-type {
+  margin-right: 3px;
+
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    text-transform: none;
+  }
+}
+
+.copyright__link span:last-of-type {
+  margin-right: 4px;
+}

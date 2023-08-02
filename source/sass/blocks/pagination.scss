@@ -5,6 +5,10 @@
   flex-wrap: wrap;
 
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-end;
+  }
 }
 
 .pagination__item {
@@ -28,6 +32,13 @@
 
   background-color: #ffffff;
   border-radius: 4px;
+
+  &--active {
+    color: #333333;
+    font-weight: 600;
+
+    background-color: transparent;
+  }
 }
 
 .pagination__button {
@@ -44,6 +55,23 @@
 
   &--next {
     transform: rotate(180deg);
+
+    @media (min-width: $tablet-width) {
+      transform: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    height: auto;
+    padding: 8px 20px;
+
+    color: #7859cf;
+    font-family: $main-fonts;
+    font-size: 16px;
+    line-height: 24px;
+
+    background-image: none;
   }
 }
 
@@ -58,4 +86,16 @@
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+
+    clip-path: none;
+    clip: auto;
+    overflow: auto;
+  }
 }
