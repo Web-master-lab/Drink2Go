@@ -64,6 +64,8 @@
   border: none;
   border-radius: 4px;
 
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     width: auto;
     margin-bottom: 0;
@@ -71,6 +73,23 @@
 
   @media (min-width: $desktop-width) {
     width: 149px;
+  }
+
+  &:hover {
+    background-color: #9070ec;
+  }
+
+  &:focus {
+    background-color: #9070ec;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
   }
 }
 
@@ -88,6 +107,8 @@
   border: none;
   border-radius: 4px;
 
+  cursor: pointer;
+
   @media (min-width: $tablet-width) {
     position: relative;
     left: 20px;
@@ -98,6 +119,27 @@
 
   @media (min-width: $desktop-width) {
     width: 149px;
+  }
+
+  &:hover, &:focus, &:active,&:disabled {
+    color: #ffffff;
+  }
+
+  &:hover {
+    background-color: #9070ec;
+  }
+
+  &:focus {
+    background-color: #9070ec;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #e2e2e2;
   }
 }
 

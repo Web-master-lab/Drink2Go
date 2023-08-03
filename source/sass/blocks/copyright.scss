@@ -24,6 +24,10 @@
   font-size: 12px;
   line-height: 16px;
   text-decoration: none;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .copyright__link span:first-of-type {
@@ -34,6 +38,30 @@
   @media (min-width: $tablet-width) {
     text-transform: none;
   }
+}
+
+.copyright__link:hover span:last-of-type {
+  color: #7859cf;
+}
+
+.copyright__link:hover svg {
+  color: #7859cf;
+}
+
+.copyright__link:focus span:last-of-type {
+  color: #7859cf;
+}
+
+.copyright__link:focus svg {
+  color: #7859cf;
+}
+
+.copyright__link:active span:last-of-type {
+  color: #593cac;
+}
+
+.copyright__link:active svg {
+  color: #593cac;
 }
 
 .copyright__link span:last-of-type {

@@ -54,6 +54,16 @@
   line-height: 16px;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover, &:focus {
+    color: #9070ec;
+
+    outline: none;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }
 
 .additional-nav__address {
@@ -99,5 +109,15 @@
     background-image: url("../../img/footer-phone.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &:hover, &:focus {
+    color: #9070ec;
+
+    outline: none;
+  }
+
+  &:active {
+    color: #593cac;
   }
 }

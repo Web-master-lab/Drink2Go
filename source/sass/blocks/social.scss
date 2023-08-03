@@ -55,23 +55,29 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
   width: 40px;
   height: 40px;
+  align-items: center;
+  justify-content: center;
+
+  color: #bdbdbd;
 
   background-repeat: no-repeat;
   background-position: center;
+  border-radius: 4px;
 
-  &--vk {
-    background-image: url("../../img/vk-grey.svg");
+  &:hover,&:focus {
+    color: #7859cf;
+
+    background-color: #f0ebff;
+    outline: none;
   }
 
-  &--pinterest {
-    background-image: url("../../img/pinterest-grey.svg");
-  }
+  &:active {
+    color: #7859cf;
 
-  &--ok {
-    background-image: url("../../img/ok-grey.svg");
+    background-color: rgba(120, 89, 207, 0.25);
   }
 }
 

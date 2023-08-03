@@ -421,6 +421,18 @@
 
     background-color: #ffffff;
   }
+
+  &:hover::before, &:focus::before {
+    background-color: rgba(120, 89, 207, 0.25);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::before {
+    background-color: #7859cf;
+  }
 }
 button.swiper-pagination-bullet {
   border: none;

@@ -6,6 +6,8 @@
   font-size: 16px;
   line-height: 24px;
 
+  cursor: pointer;
+
   &--radio {
     padding-left: 34px;
   }
@@ -13,6 +15,37 @@
   &--checkbox {
     padding-left: 52px;
   }
+}
+
+.control:hover .control__mark--radio {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #e2e2e2;
+    border-radius: 50%;
+  }
+}
+
+.control:hover .control__mark--checkbox::before {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.control__input:focus ~ .control__mark--checkbox::before {
+  background-color: rgba(120, 89, 207, 0.25);
+}
+
+.control:hover .control__mark::before {
+  border-color: #9070ec;
+}
+
+.control__input:focus ~ .control__mark::before {
+  border-color: #9070ec;
 }
 
 .control__mark--radio {
@@ -56,8 +89,34 @@
   }
 }
 
+.control__input:disabled ~ .control__mark--checkbox {
+  &::before {
+    border-color: #e2e2e2;
+  }
+}
+
 .control__input:disabled ~ .control__label {
   color: #bdbdbd;
+}
+
+.control__input:disabled ~ .control__mark--radio::after {
+  display: none;
+}
+
+.control__input:disabled:checked ~ .control__mark--radio {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    background-color: #e2e2e2;
+    border-radius: 50%;
+  }
 }
 
 .control__mark--checkbox {
@@ -71,6 +130,7 @@
     height: 24px;
 
     background-color: #bdbdbd;
+    border: 2px solid transparent;
     border-radius: 12px;
   }
 
@@ -105,5 +165,11 @@
 
   &::after {
     background-color: #f8f8f8;
+  }
+}
+
+.control__input:disabled:checked ~ .control__mark--checkbox {
+  &::after {
+    background-color: #bdbdbd;
   }
 }

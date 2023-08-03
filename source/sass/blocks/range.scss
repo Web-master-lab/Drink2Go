@@ -7,38 +7,69 @@
   margin-bottom: 24px;
   align-items: center;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 5;
-
-    width: 24px;
-    height: 24px;
-
-    background-color: #ffffff;
-    border: 2px solid #9070ec;
-    border-radius: 50%;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 0;
-    z-index: 5;
-
-    width: 24px;
-    height: 24px;
-
-    background-color: #ffffff;
-    border: 2px solid #9070ec;
-    border-radius: 50%;
-  }
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     width: auto;
+  }
+}
+
+.range__switcher {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #9070ec;
+  border-radius: 50%;
+
+  &--from {
+    left: 0;
+  }
+
+  &--to {
+    right: 20px;
+  }
+
+  &:hover::before, &:focus::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: rgba(120, 89, 207, 0.25);
+    border-radius: 50%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #7859cf;
+    border-radius: 50%;
+  }
+
+  &:disabled {
+    background-color: #f8f8f8;
+    border-color: #bdbdbd;
   }
 }
 
@@ -109,6 +140,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  text-align: center;
 
 
   border: 2px solid #9070ec;
@@ -120,5 +152,36 @@
 
   @media (min-width: $desktop-width) {
     width: 134px;
+  }
+
+  &:focus {
+    border-color: #593cac;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: #f8f8f8;
+    border-color: #bdbdbd;
+  }
+
+  &:disabled::placeholder {
+    color: #bdbdbd;
+  }
+}
+
+.range__slider--disabled .range__slider-bar::before {
+  background-color: #bdbdbd;
+}
+
+.range__slider--disabled .range__switcher {
+  background-color: #f8f8f8;
+  border-color: #bdbdbd;
+
+  &:hover::before, &:focus::before {
+    display: none;
+  }
+
+  &:active::before {
+    display: none;
   }
 }

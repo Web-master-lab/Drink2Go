@@ -188,41 +188,81 @@
   background-color: #7859cf;
   border: none;
   border-radius: 4px;
+
+  cursor: pointer;
+
+  &:hover {
+    background-color: #9070ec;
+  }
+
+  &:focus {
+    background-color: #9070ec;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
 }
 
 .promo__button-control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    z-index: 1;
+  width: 20px;
 
-    width: 20px;
+  background-color: transparent;
+  background-image: url("../../img/slider-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 
-    background-image: url("../../img/slider-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
 
-    @media (min-width: $tablet-width) {
-      bottom: 188px;
+  @media (min-width: $tablet-width) {
+    bottom: 188px;
 
-      width: 80px;
-    }
-
-    @media (min-width: $desktop-width) {
-      bottom: 0;
-    }
+    width: 80px;
   }
 
-  &--prev::before {
+  @media (min-width: $desktop-width) {
+    bottom: 0;
+  }
+
+  &--prev {
     left: 0;
   }
 
-  &--next::before {
+  &--next {
     right: 0;
 
     transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-image: url("../../img/slider-arrow.svg"),
+    linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+  }
+
+  &:focus {
+    background-image: url("../../img/slider-arrow.svg"),
+    linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+    outline: none;
+  }
+
+  &:active {
+    background-image: url("../../img/slider-arrow.svg"),
+    linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+  }
+
+  &:disabled {
+    background-image: url("../../img/slider-arrow-disabled.svg");
   }
 }

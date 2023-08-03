@@ -6,9 +6,11 @@
 .user-list__link {
   display: flex;
   width: 60px;
-  height: 36px;
+  height: 60px;
   align-items: center;
   justify-content: center;
+
+  color: #333333;
 
   @media (min-width: $tablet-width) {
     height: 80px;
@@ -24,6 +26,24 @@
     line-height: 16px;
     text-decoration: none;
     text-transform: uppercase;
+  }
+
+  &:hover,&:focus {
+    color: #7859cf;
+
+    outline: none;
+  }
+
+  &:active {
+    color: #333333;
+
+    background-color: #f0ebff;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:active {
+      color: #7859cf;
+    }
   }
 }
 

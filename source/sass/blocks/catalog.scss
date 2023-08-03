@@ -83,9 +83,20 @@
   border: none;
 
   appearance: none;
+  cursor: pointer;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 26px;
+  }
+
+  &:hover, &:focus {
+    background-color: #f0ebff;
+    outline: none;
+  }
+
+  &:active {
+    background-color: transparent;
+    background-image: url("../../img/select-arrow-up.svg");
   }
 }
 

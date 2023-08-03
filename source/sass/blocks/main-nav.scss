@@ -13,7 +13,7 @@
 
 .main-nav__toggle {
   width: 60px;
-  height: 36px;
+  height: 60px;
   padding: 0;
 
   border: none;
@@ -23,6 +23,10 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+
+  &:active {
+    background-color: #f0ebff;
   }
 }
 
