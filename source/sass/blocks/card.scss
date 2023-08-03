@@ -3,6 +3,10 @@
 
   background-color: #ffffff;
   border-radius: 4px;
+
+  @media (min-width: $desktop-width) {
+    padding: 50px 30px 30px;
+  }
 }
 
 .card__link {

@@ -4,6 +4,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px 40px;
   }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
 }
 
 .filter__group {
@@ -12,6 +18,12 @@
   padding: 0;
 
   border: none;
+
+  @media (min-width: $desktop-width) {
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .filter__legend {
@@ -56,6 +68,10 @@
     width: auto;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
 }
 
 .filter__reset {
@@ -79,6 +95,10 @@
     width: auto;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 149px;
+  }
 }
 
 .filter__buttons {
@@ -87,5 +107,10 @@
     margin-bottom: 40px;
     grid-column: 1/-1;
     justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    justify-content: normal;
   }
 }

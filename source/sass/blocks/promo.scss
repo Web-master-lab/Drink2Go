@@ -19,6 +19,10 @@
     @media (min-width: $tablet-width) {
       bottom: 188px;
     }
+
+    @media (min-width: $desktop-width) {
+      bottom: 0;
+    }
   }
 
   &--white::before {
@@ -37,11 +41,24 @@
     height: auto;
     padding: 60px 20px 0;
   }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding: 30px 80px 84px 105px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
 }
 
 .promo__slide picture {
   @media (min-width: $tablet-width) {
     order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: flex-end;
+    order: 0;
   }
 }
 
@@ -52,6 +69,11 @@
     width: 476px;
     height: 476px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 600px;
+    height: 600px;
   }
 }
 
@@ -65,6 +87,10 @@
   line-height: 16px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .promo__title {
@@ -82,6 +108,10 @@
     font-size: 56px;
     line-height: 80px;
   }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 }
 
 .promo__description {
@@ -96,11 +126,21 @@
     font-size: 20px;
     line-height: 32px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+
+    text-align: left;
+  }
 }
 
 .promo__buy {
   display: flex;
   justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
+  }
 }
 
 .promo__prices {
@@ -127,6 +167,14 @@
 
 .promo__pagination {
   display: none;
+
+  @media (min-width: $desktop-width) {
+    bottom: 60px;
+
+    display: block;
+
+
+  }
 }
 
 .promo__button {
@@ -162,8 +210,11 @@
 
       width: 80px;
     }
-  }
 
+    @media (min-width: $desktop-width) {
+      bottom: 0;
+    }
+  }
 
   &--prev::before {
     left: 0;

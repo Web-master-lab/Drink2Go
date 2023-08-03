@@ -4,6 +4,10 @@
 
     margin-right: 60px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 162px;
+  }
 }
 
 .site-list__item:first-of-type .site-list__link {

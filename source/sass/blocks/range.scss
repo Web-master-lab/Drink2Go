@@ -58,6 +58,10 @@
     height: 4px;
 
     background-color: #9070ec;
+
+    @media (min-width: $desktop-width) {
+      right: 32px;
+    }
   }
 }
 
@@ -112,5 +116,9 @@
 
   @media (min-width: $tablet-width) {
     width: 87px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
   }
 }

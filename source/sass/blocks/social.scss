@@ -7,9 +7,17 @@
   border-bottom: 1px solid #f0ebff;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 20px 30px;
+    padding: 0;
+    padding-bottom: 30px;
 
     border: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    align-items: normal;
+    justify-content: normal;
+    flex-direction: column;
   }
 }
 
@@ -26,6 +34,23 @@
 
   &:last-of-type {
     margin-right: 0;
+  }
+}
+
+.social__logo {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 50px;
+
+    color: #333333;
+    text-decoration: none;
+  }
+}
+
+.social__logo picture {
+  @media (min-width: $desktop-width) {
+    display: block;
+
+    margin-bottom: 10px;
   }
 }
 
@@ -47,5 +72,13 @@
 
   &--ok {
     background-image: url("../../img/ok-grey.svg");
+  }
+}
+
+.social__logo-text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
   }
 }

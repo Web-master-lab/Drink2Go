@@ -18,5 +18,33 @@
 
 .header__logo {
   display: block;
-  padding: 22px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 22px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+
+    color: #333333;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+}
+
+.header__logo picture {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.header__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 126px;
+  }
 }

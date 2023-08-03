@@ -1,0 +1,12 @@
+.footer {
+  @media (min-width: $tablet-width) {
+    padding: 40px 20px 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    padding: 50px 40px 40px;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+  }
+}
