@@ -34,7 +34,6 @@
 .catalog__title {
   margin-top: 0;
   margin-bottom: 20px;
-  padding-right: 3px;
 
   font-size: 24px;
   font-weight: 700;
@@ -109,7 +108,8 @@
     background-position: 142px 13px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: #f0ebff;
     outline: none;
   }
@@ -123,7 +123,7 @@
 .catalog__wrapper {
   position: relative;
 
-  @media (min-width:$tablet-width) {
+  @media (min-width: $tablet-width) {
     display: flex;
     flex-direction: column;
   }

@@ -89,12 +89,6 @@
   }
 }
 
-.control__input:disabled ~ .control__mark--checkbox {
-  &::before {
-    border-color: #e2e2e2;
-  }
-}
-
 .control__input:disabled ~ .control__label {
   color: #bdbdbd;
 }
@@ -161,6 +155,7 @@
 .control__input:disabled ~ .control__mark--checkbox {
   &::before {
     background-color: #e2e2e2;
+    border-color: #e2e2e2;
   }
 
   &::after {

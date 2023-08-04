@@ -131,7 +131,10 @@
     width: 149px;
   }
 
-  &:hover, &:focus, &:active,&:disabled {
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
     color: #ffffff;
   }
 
@@ -159,6 +162,8 @@
     margin-bottom: 40px;
     grid-column: 1/-1;
     justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
   }
 
   @media (min-width: $desktop-width) {

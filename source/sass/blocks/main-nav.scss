@@ -2,6 +2,10 @@
   display: flex;
 
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    justify-content: space-between;
+  }
 }
 
 .main-nav__list {
@@ -57,11 +61,20 @@
   }
 
   .main-nav--nojs .site-list {
-    position: absolute;
-    top: 60px;
-    left: 0;
+    position: static;
     z-index: 3;
 
     display: block;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+  }
+
+  .main-nav--nojs .user-list {
+    grid-column: 3/4;
+  }
+
+  .main-nav--nojs {
+    display: grid;
+    grid-template-columns: min-content 1fr auto;
   }
 }

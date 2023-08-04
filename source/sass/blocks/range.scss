@@ -42,7 +42,8 @@
     right: 20px;
   }
 
-  &:hover::before, &:focus::before {
+  &:hover::before,
+  &:focus::before {
     content: "";
     position: absolute;
     top: 2px;
@@ -182,7 +183,8 @@
   background-color: #f8f8f8;
   border-color: #bdbdbd;
 
-  &:hover::before, &:focus::before {
+  &:hover::before,
+  &:focus::before {
     display: none;
   }
 

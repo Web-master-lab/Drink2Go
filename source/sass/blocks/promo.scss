@@ -192,8 +192,6 @@
     bottom: 60px;
 
     display: block;
-
-
   }
 }
 
@@ -267,19 +265,16 @@
   }
 
   &:hover {
-    background-image: url("../../img/slider-arrow.svg"),
-    linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-image: url("../../img/slider-arrow.svg"), linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   }
 
   &:focus {
-    background-image: url("../../img/slider-arrow.svg"),
-    linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.00) 100%);
+    background-image: url("../../img/slider-arrow.svg"), linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
     outline: none;
   }
 
   &:active {
-    background-image: url("../../img/slider-arrow.svg"),
-    linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0.00) 100%);
+    background-image: url("../../img/slider-arrow.svg"), linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
 
   &:disabled {

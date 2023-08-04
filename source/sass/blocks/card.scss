@@ -12,11 +12,11 @@
 
   @media (min-width: $desktop-width) {
     &:nth-of-type(2) {
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
 
     &:hover {
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -45,7 +45,7 @@
     &:focus::before {
       bottom: 0;
 
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
     }
   }
 }

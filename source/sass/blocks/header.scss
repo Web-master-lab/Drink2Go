@@ -1,16 +1,14 @@
 .header {
   position: relative;
 
-  display: flex;
-  height: 60px;
-  justify-content: space-between;
+  min-height: 60px;
 
   color: #333333;
 
   background-color: #ffffff;
 
   @media (min-width: $tablet-width) {
-    height: 80px;
+    min-height: 80px;
     padding: 0 20px;
   }
 
@@ -21,6 +19,7 @@
 
 .header__logo {
   display: block;
+  margin-right: auto;
   padding: 12px 0 0 20px;
 
   @media (min-width: $tablet-width) {

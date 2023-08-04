@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
+  row-gap: 10px;
 
   list-style-type: none;
 
@@ -29,7 +30,7 @@
 
 .pagination__link {
   display: block;
-  width: 40px;
+  min-width: 40px;
   padding: 8px;
 
   color: #7859cf;
@@ -41,7 +42,10 @@
   background-color: #ffffff;
   border-radius: 4px;
 
-  &:hover, &:focus, &:active, &--disabled {
+  &:hover,
+  &:focus,
+  &:active,
+  &--disabled {
     color: #ffffff;
   }
 
@@ -64,7 +68,9 @@
 
     background-color: transparent;
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       color: #333333;
 
       background-color: transparent;
@@ -79,8 +85,8 @@
 }
 
 .pagination__button {
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
 
   background-color: #ffffff;
   border: none;
@@ -111,7 +117,10 @@
     background-image: none;
   }
 
-  &:hover, &:focus, &:active, &:disabled {
+  &:hover,
+  &:focus,
+  &:active,
+  &:disabled {
     color: #ffffff;
   }
 

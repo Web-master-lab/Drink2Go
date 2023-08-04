@@ -6,21 +6,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat-semiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg" alt="Наш логотип.">
-        </picture>
-        <span class="header__text">Интернет-магазин кофейных напитков</span>
-      </a>
-
       <!-- Для открытия меню класс - "main-nav--opened" -->
       <!-- Для проверки работы без JS класс - "main-nav--nojs" -->
       <nav class="main-nav main-nav--closed">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" alt="Наш логотип.">
+          </picture>
+          <span class="header__text">Интернет-магазин кофейных напитков</span>
+        </a>
+
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
             <a class="site-list__link site-list__link--active">Главная</a>
@@ -191,7 +195,7 @@
         <p class="catalog__intro">Каталог</p>
         <h2 class="catalog__title">Каталог кофейных напитков</h2>
 
-        <form class="filter" action="#" method="post" id="filters">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="post" id="filters">
           <h3 class="visually-hidden">Фильтры товаров.</h3>
           <fieldset class="filter__group">
             <legend class="filter__legend">Цена</legend>
@@ -438,11 +442,12 @@
         </div>
       </section>
 
-      <div class="map" id="map"></div>
+      <div class="map" id="map" aria-label="Санкт-Петербург, набережная реки Карповки, дом 5"></div>
     </main>
 
     <footer class="footer">
       <section class="social">
+        <h2 class="visually-hidden">Мы в социальных сетях!</h2>
         <a class="social__logo" href="index.html">
           <picture>
             <source media="(min-width: 768px)" srcset="img/logo-desktop.svg">

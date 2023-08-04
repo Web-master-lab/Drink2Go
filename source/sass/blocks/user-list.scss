@@ -1,5 +1,6 @@
 .user-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .user-list__item {
@@ -37,7 +38,8 @@
     text-transform: uppercase;
   }
 
-  &:hover,&:focus {
+  &:hover,
+  &:focus {
     color: #7859cf;
 
     outline: none;
