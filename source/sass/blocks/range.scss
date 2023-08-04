@@ -11,6 +11,11 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 22px;
   }
 }
 
@@ -133,7 +138,7 @@
 
 .range__input {
   width: 118px;
-  padding: 8px 10px;
+  padding: 6px 10px;
 
   color: #333333;
   font-family: $main-fonts;

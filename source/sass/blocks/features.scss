@@ -18,6 +18,7 @@
   font-size: 12px;
   font-weight: 700;
   line-height: 16px;
+  letter-spacing: 0.48px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -69,22 +70,6 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
 
-  &--speed {
-    background-image: url("../../img/features-speed.svg");
-  }
-
-  &--comfort {
-    background-image: url("../../img/features-comfort.svg");
-  }
-
-  &--energy {
-    background-image: url("../../img/features-energy.svg");
-  }
-
-  &--eco {
-    background-image: url("../../img/features-eco.svg");
-  }
-
   &:last-of-type {
     margin-bottom: 0;
   }
@@ -95,6 +80,38 @@
     padding-left: 72px;
 
     background-position: 0 0;
+  }
+
+  &--speed {
+    background-image: url("../../img/features-speed.svg");
+
+    @media (min-width: $tablet-width) {
+      padding-left: 82px;
+
+      background-position: 9px 4px;
+    }
+  }
+
+  &--comfort {
+    background-image: url("../../img/features-comfort.svg");
+  }
+
+  &--energy {
+    background-image: url("../../img/features-energy.svg");
+
+    @media (min-width: $tablet-width) {
+      padding-left: 82px;
+
+      background-position: 9px 0;
+    }
+  }
+
+  &--eco {
+    background-image: url("../../img/features-eco.svg");
+
+    @media (min-width: $tablet-width) {
+      background-position: 0 4px;
+    }
   }
 
   @media (min-width: $desktop-width) {

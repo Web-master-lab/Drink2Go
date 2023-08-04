@@ -32,12 +32,6 @@
 
 .copyright__link span:first-of-type {
   margin-right: 3px;
-
-  text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    text-transform: none;
-  }
 }
 
 .copyright__link:hover span:last-of-type {

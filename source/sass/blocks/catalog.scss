@@ -11,7 +11,7 @@
     display: grid;
     padding: 100px 40px 120px;
     grid-template-columns: 1fr 3fr;
-    column-gap: 30px;
+    column-gap: 11px;
   }
 }
 
@@ -34,6 +34,7 @@
 .catalog__title {
   margin-top: 0;
   margin-bottom: 20px;
+  padding-right: 3px;
 
   font-size: 24px;
   font-weight: 700;
@@ -47,13 +48,27 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
     grid-column: 1/-1;
   }
 }
 
 .catalog__sort-wrapper {
+  display: flex;
+  margin-bottom: 16px;
+  padding-left: 3px;
+  align-items: center;
+
   @media (min-width: $tablet-width) {
+    margin-bottom: 26px;
     align-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    bottom: 4px;
+
+    margin-bottom: 22px;
   }
 }
 
@@ -63,11 +78,14 @@
   font-size: 16px;
   font-weight: 600;
   line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-right: 14px;
+  }
 }
 
 .catalog__sort {
   width: 162px;
-  margin-bottom: 16px;
   padding: 4px 0 4px 10px;
 
   color: #7859cf;
@@ -79,14 +97,16 @@
   background-color: transparent;
   background-image: url("../../img/select-arrow.svg");
   background-repeat: no-repeat;
-  background-position: 142px 13px;
+  background-position: 146px 13px;
   border: none;
 
   appearance: none;
   cursor: pointer;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 26px;
+    padding: 4px 0 4px 8px;
+
+    background-position: 142px 13px;
   }
 
   &:hover, &:focus {
@@ -115,6 +135,7 @@
   row-gap: 20px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 70px;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
   }

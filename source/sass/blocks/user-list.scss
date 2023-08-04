@@ -2,6 +2,15 @@
   display: flex;
 }
 
+.user-list__item {
+  @media (min-width: $desktop-width) {
+    margin-right: 23px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
 
 .user-list__link {
   display: flex;

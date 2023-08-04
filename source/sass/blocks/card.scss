@@ -1,16 +1,22 @@
 .card {
   position: relative;
 
-  padding: 40px 20px 20px;
+  padding: 40px 22px 20px 20px;
 
   background-color: #ffffff;
   border-radius: 4px;
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     padding: 50px 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-of-type(2) {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    }
 
     &:hover {
-      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);;
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.15);
     }
   }
 }
@@ -51,6 +57,10 @@
 
 .card__img {
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .card__title {
@@ -77,19 +87,31 @@
   }
 }
 
+.card__description br {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
 .card__buy {
   display: flex;
   justify-content: space-between;
 }
 
 .card__price {
+  position: relative;
+  top: 2px;
+  right: 2px;
+
   font-size: 20px;
   font-weight: 600;
   line-height: 32px;
 }
 
 .card__button {
-  padding: 8px 20px 8px 46px;
+  padding: 8px 18px 8px 46px;
 
   color: #ffffff;
   font-family: $main-fonts;
@@ -99,11 +121,15 @@
   background-color: #7859cf;
   background-image: url("../../img/basket-card.svg");
   background-repeat: no-repeat;
-  background-position: 20px 8px;
+  background-position: 20px 9px;
   border: none;
   border-radius: 4px;
 
   cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 48px;
+  }
 
   &:hover {
     background-color: #9070ec;
